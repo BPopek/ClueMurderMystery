@@ -15,8 +15,7 @@ class Game extends Component {
         }
     }
 
-    handleTutorialToggle = e => {
-        
+    handleTutorialToggle = e => {       
         if(e.target.value === 'tutorial'){
             this.setState({tutorial: 'tutorial'})
         } else {
@@ -39,8 +38,7 @@ class Game extends Component {
         }
     }
 
-    addFoundClue = (inputClue, idName, clueNum) => {
-        
+    addFoundClue = (inputClue, idName, clueNum) => {    
         this.props.saveClue(inputClue)
         this.props.updateClickCount()
         if(this.props.dead === true){
@@ -50,10 +48,8 @@ class Game extends Component {
         foundDiv.classList.add('hidden')
         this.props.handleHideClues(clueNum)
     }
-   
 
-    render() {
-        
+    render() {   
         return(
             <div className='gameDiv'>
                 {this.props.needTutorial
@@ -114,7 +110,6 @@ class Game extends Component {
                                 <div className='gameClueTitle'>{this.props.clues[2].name}</div>
                                 <h3 className='gameClueDescription'>{this.props.clues[2].description}</h3>
                                 <button onClick={() => this.addFoundClue(this.props.clues[2], 'clue3', 2)} className='gameAddClueButton'>Gather Evidence</button>
-            
                             </div>
                             :
                             <div id='clue3B' style={this.props.hideClues[2] ? {display: 'none'} : {}} className='gameClueDivHIDE-3' onClick={() => this.handleClueToggle(2)}>
@@ -219,7 +214,6 @@ class Game extends Component {
                             </div>   
                         }
                     </div>
-
                 }
             </div>
         )

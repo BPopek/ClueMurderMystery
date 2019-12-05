@@ -1,20 +1,5 @@
 @import url('https://fonts.googleapis.com/css?family=Roboto:light,regular,bold,italic|Montserrat:light,regular,bold,black,italic');
 
-/* .accuseDiv {
-    background-image: url("../images/Accuse.jpg");
-    background-size: auto;
-    background-position: center;
-    background-color: black;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    background-repeat: no-repeat;
-    height: 100vh;
-    width: 100%;
-    max-height: 1025px;
-    margin-top: 50px;
-}     */
-
 .accuseDiv {
     background-color: #165d30ed;
     margin-top: 50px;
@@ -33,7 +18,6 @@
     padding: 15px 0px;
 }
 .ChooseOne:hover {
-    /* color: #c8102e; */
     background-color: #c8102e;
 }
 .accusationMap {
@@ -82,12 +66,8 @@
     box-shadow: #070405 5px -5px 25px inset;
 }
 .accusedSelected {
-    /* background-image: url('../images/Accused.jpg'); */
-    /* background-size: 100% 100%; */
-    /* padding: 10px; */
     margin: auto;
     border-radius: 10px;
-    /* background-position: center; */
     background-repeat: no-repeat;
     color: #c8102e;
     outline-color: whitesmoke;
@@ -97,7 +77,6 @@
     width: 180px;
     margin: auto;
 }
-
 .accuseCharCardImage {
     width: 250px;
     height: auto;

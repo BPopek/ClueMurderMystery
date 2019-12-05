@@ -15,7 +15,6 @@
     background-color: #101;
     line-height: 50px;
     margin: 0;
-    /* transition: top 0.6s; */
     z-index: 1;
 }
 .Navbar-link {
@@ -44,10 +43,8 @@
 .landingDiv {
     position: absolute;
     top: 200px;
-    /* height: 101vh; */
     width: 100vw;
     margin: 0px;
-    /* padding-bottom: 200px; */
 }
 .logo {
     height: 35px;
@@ -65,7 +62,6 @@
     background-color: #101;
     line-height: 50px;
     margin: 0;
-    /* transition: top 0.6s; */
     z-index: 1;
 }
 .logoWide {
@@ -107,10 +103,6 @@
     color: whitesmoke;
     border: none;
 }
-/* .startGameButtonDiv {
-    text-align: center;
-    margin-top: 30px;
-} */
 .startGameButton {
     margin-left: 10px;
     padding: 7.5px 12.5px;
@@ -130,7 +122,6 @@
     font-size: 16px;
     margin: 10px 20px;
 }
-
 .particles canvas {
     position: fixed;
     top: 50px;

@@ -25,7 +25,8 @@ class ClueProvider extends Component {
             hideClues: [false, false, false, false, false, false, false, false, false, false, false],
             showCharAlibi: [false, false, false, false, false, false],
             attempts: 3,
-            canPlay: false
+            canPlay: false,
+            hasPlayed: false
         }
     }
 
@@ -40,17 +41,24 @@ class ClueProvider extends Component {
             canPlay: false
         })
     }
+
+    songHasPlayed = () => {
+        this.setState({
+            hasPlayed: true,
+        })
+    }
+
     tries = () => {
         this.setState(prevState => ({
             attempts: prevState.attempts -= 1
         }))
     }
+
     getAll = () => {
-    
         axios.get('/weapon')
             .then(res => {
                 this.setState({
-                    weapons:res.data,
+                    weapons: res.data,
                 })
                 this.chooseWeapon()
 
@@ -71,27 +79,21 @@ class ClueProvider extends Component {
                     .catch(err => console.log(err))
                     })
                     .catch(err => console.log(err))
-        
-        
-        
         axios.get('/character')
             .then(res => {
                 this.setState({
-                    characters:res.data
+                    characters: res.data
                 })
                 this.chooseKiller()
             })
-
     }
 
     chooseWeapon = () => {
         const weaponIndex = Math.floor(Math.random()*(this.state.weapons.length))
         this.setState({
             murderWeapon: this.state.weapons[weaponIndex]
-        })
-        
+        })  
     }
-
 
     chooseKiller = () => {
         const killerIndex = Math.floor(Math.random()*(this.state.characters.length))
@@ -108,20 +110,16 @@ class ClueProvider extends Component {
         console.log(this.state.murderWeapon.name, newClues)
     }
 
-    
-
     // function so player can set their title and name
     chooseName = (name, title) => {
         this.setState({name: name})
         this.setState({title: title})
     }
 
-    saveClue = (myClue) => {
-        
+    saveClue = (myClue) => {     
         this.setState(prevState => ({
-            foundClues:[...prevState.foundClues, myClue]
-        }))
-        
+            foundClues: [...prevState.foundClues, myClue]
+        })) 
     }
 
     guess = (murderer, weapon) => {
@@ -131,21 +129,19 @@ class ClueProvider extends Component {
                 this.setState({
                     hasWon: true
                 })
-            console.log("Player Won")
-            
+            console.log("Player Won")     
         } else {
             this.setState(prevState =>({
                 accuseCount: prevState.accuseCount -= 1
             }))
             if (this.state.accuseCount === 1) {
-               
                 this.setState({
                     lostCount: true
                 }) 
-                
             }
         }
     }
+
     handleRestartClick = () => {
         this.setState({
             clues: [],
@@ -168,10 +164,8 @@ class ClueProvider extends Component {
             attempts: 3,
             canPlay: false
         })
-        this.getAll()
-        
+        this.getAll()   
     }
-
     
     updateClickCount = () => {
         this.setState({clickedCount: this.state.clickedCount + 1})
@@ -206,12 +200,9 @@ class ClueProvider extends Component {
 
     handleHideClues = (clueNum) => {
         const currentArr = this.state.hideClues
-        // console.log(`firstArr: ${currentArr}`)
         const isHidden = !this.state.hideClues[clueNum]
         currentArr.splice(clueNum, 1, isHidden)
-        // console.log(`secondeArr: ${currentArr}`)
-        // console.log(`clueNum: ${clueNum}`)
-        // console.log(`isHidden: ${isHidden}`)
+   
         this.setState(() => ({
             hideClues: currentArr
         }))
@@ -246,14 +237,13 @@ class ClueProvider extends Component {
                     handleShowCharAlibi: this.handleShowCharAlibi,
                     tries: this.tries,
                     sound: this.sound,
-                    stopPlay: this.stopPlay
+                    stopPlay: this.stopPlay,
+                    songHasPlayed: this.songHasPlayed,
                 }}>
                 {this.props.children}
             </ClueContext.Provider>
-
         )
     }
-
 }
 
 export default ClueProvider

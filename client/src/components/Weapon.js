@@ -8,8 +8,8 @@ const Weapon = (props) => {
     let filtered = props.foundClues.filter(ind => {
         return ind.name === name
     })
+
     let myClass
-    
         path === '/accuse-suspect'
         ?
             name === weapon
@@ -44,8 +44,7 @@ const Weapon = (props) => {
                             <div className="weaponFound">FOUND</div>
                             :
                             null
-                        }
-                    
+                        }                    
                 </div>
             </div>
         }

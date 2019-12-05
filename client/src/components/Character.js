@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import {withClue} from '../context/ClueProvider'
 
-
 class Character extends Component { 
 
     constructor() {
@@ -11,6 +10,7 @@ class Character extends Component {
             showAlibi: false
         }
     }
+
     componentDidMount() {
         let filtered = this.props.foundClues.filter(ind => {
             return ind.character === this.props.name
@@ -23,40 +23,34 @@ class Character extends Component {
          :
         this.setState({
             canQuestion: false
-        })
-
-        
+        })  
     }
+
     question = () => {
         this.props.updateClickCount()
         this.setState({
             showAlibi: true
-        })
-        
+        })     
         if(this.props.dead === true){
             this.props.history.push('/gameOver')
         }
-       
        //change index in context showCharAlibi
        this.props.handleShowCharAlibi(this.props.index)
     }
     
+    render() {
+        const {name, age, description, imgUrl, path, handleChange, murderer, killer} = this.props
 
-
- render() {
-    const {name, age, description, imgUrl, path, handleChange, murderer, killer} = this.props
-    let myClass
-    
-        path === '/accuse-suspect'
-        ?
-            name === murderer
+        let myClass
+            path === '/accuse-suspect'
             ?
-            myClass = 'accusedSelected'
+                name === murderer
+                ?
+                myClass = 'accusedSelected'
+                :
+                myClass = 'accusationChar'
             :
-            myClass = 'accusationChar'
-        :
-         myClass = 'character'
-    
+            myClass = 'character'
     
         return (
             <>
@@ -86,8 +80,6 @@ class Character extends Component {
                                 :
                                 null
                             }
-                        {/* </div>
-                        <div className="questionSus"> */}
                             {
                                 this.props.showAlibi || this.props.showCharAlibi[this.props.index]
                                 ?
@@ -99,7 +91,6 @@ class Character extends Component {
                                     <h5 className='suspectGuilty'>"{this.props.guiltyTxt}"</h5>
                                 :
                                 null
-                                    
                             }
                         </div>
                     </div>

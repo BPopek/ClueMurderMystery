@@ -31,8 +31,7 @@ class Accusation extends Component {
         } else {
             console.log(this.props.lostCount)
             if(this.props.lostCount === true){
-                this.props.history.push('/gameOver')
-            
+                this.props.history.push('/gameOver')     
             } else {
                 alert("You accused the wrong person, try again")
                 this.props.tries()

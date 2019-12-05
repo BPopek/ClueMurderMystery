@@ -44,14 +44,14 @@ html {
     font-family:'BLOODY', 'bloodlust', 'ExquisiteCorpse', Marker Felt;
     letter-spacing: 2px;
     color:white;
-    margin:100px auto;
-    width:100%;
-    font-size:120px;
-    transition:all 3s ease-in-out;
-      -webkit-transition:all 3s ease-in-out;
-      -moz-transition:all 3s ease-in-out;
-    -o-transition:all 15s ease-in-out;
-    color:white;
+    margin: 100px auto;
+    width: 100%;
+    font-size: 120px;
+    transition: all 3s ease-in-out;
+      -webkit-transition: all 3s ease-in-out;
+      -moz-transition: all 3s ease-in-out;
+    -o-transition: all 15s ease-in-out;
+    color: white;
     padding-top: 200px;
     margin-bottom: 0;
     padding-bottom: 0;
@@ -88,14 +88,11 @@ html {
 .wonMessage {
     margin-top: 150px;
     text-align: center;
-    /* animation-name: lostMessage; */
-    /* animation-duration: 4s; */
     color: #d1ab10;
     padding-top: 50px;
     font-size: 80px;
     text-shadow: 2px 2px 0px rgba(0, 0, 0, 0.363);    
     font-family: Marker Felt, Georgia, 'Times New Roman', Times, serif;
-
 }
 .wonConfetti {
     width: 100%;
@@ -106,8 +103,6 @@ html {
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     margin-top: 70px;
     text-align: center;
-    /* animation-name: lostMessage; */
-    /* animation-duration: 4s; */
     color: #c8102e;
     padding-top: 90px;
     font-size: 80px;
@@ -119,8 +114,6 @@ html {
     animation: tracking-in-expand 0.7s cubic-bezier(0.215, 0.610, 0.355, 1.000) both;
     margin-top: 20px;
     text-align: center;
-    /* animation-name: lostMessage; */
-    /* animation-duration: 4s; */
     color: #d1ab10;
     padding: 50px;
     font-size: 35px;
@@ -151,7 +144,7 @@ html {
     100% {
         opacity: 1;
     }
-    }
+}
   
 @media screen and (min-width: 800px) {
     .tracking-in-expand {

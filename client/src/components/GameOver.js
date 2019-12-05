@@ -1,7 +1,6 @@
 import React, {Component} from 'react'
 import { withClue } from '../context/ClueProvider';
 
-
 class GameOver extends Component {
     
     handleClick = () => {
@@ -31,9 +30,5 @@ class GameOver extends Component {
         )
     }
 }
-
-
-
-
 
 export default withClue(GameOver)

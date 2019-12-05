@@ -8,6 +8,7 @@ class GameWon extends Component {
         this.props.history.push('/')
         this.props.handleRestartClick()
     }
+
     render() {
         return (
             <div className='gameOver'>
@@ -20,6 +21,5 @@ class GameWon extends Component {
         )
     }
 }
-
 
 export default withClue(GameWon)

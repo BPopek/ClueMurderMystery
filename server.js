@@ -9,6 +9,10 @@ app.use(express.json())
 app.use(morgan("dev"))
 app.use(express.static(path.join(__dirname, "client", "build")))
 
+app.use("/clue", require("./routes/ClueRouter"))
+app.use("/character", require("./routes/CharacterRouter"))
+app.use("/weapon", require("./routes/WeaponRouter"))
+
 mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cluedb',
     {
         useNewUrlParser: true,
@@ -16,10 +20,6 @@ mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cluedb',
         useCreateIndex: false,
         useUnifiedTopology: true
     }, () => console.log("Connected to MongoDB" ))
-
-app.use("/clue", require("./routes/ClueRouter"))
-app.use("/character", require("./routes/CharacterRouter"))
-app.use("/weapon", require("./routes/WeaponRouter"))
 
 app.get("*", (req, res) => {
     res.sendFile(path.join(__dirname, "client", "build", "index.html"))

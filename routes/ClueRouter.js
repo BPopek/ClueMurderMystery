@@ -1,6 +1,6 @@
 const express = require('express')
 const clueRouter = express.Router()
-const Clue = require('../models/clue')
+const Clue = require('../models/Clue')
 
 clueRouter.route('/')
     .get ((req, res) => {

@@ -2,7 +2,6 @@ const express = require('express')
 const characterRouter = express.Router()
 const Character = require('../models/Character')
 
-
 characterRouter.route('/')
     .get ((req, res) => {
         Character.find((err, characters) => {

@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"cluedb.clues"}],"uuid":"83faf3eb063c49df95b625dfc6306d6a"}

@@ -7,7 +7,6 @@ import './CSS-Stylesheets/characterStyles.css'
 import './CSS-Stylesheets/weaponStyles.css'
 import './CSS-Stylesheets/gameOver.css'
 
-
 // my components
 import Navbar from './components/Navbar'
 import LandingPage from './components/LandingPage'
@@ -17,8 +16,6 @@ import CharacterList from './components/CharacterList'
 import WeaponList from './components/WeaponList'
 import GameOver from './components/GameOver'
 import GameWon from './components/GameWon'
-
-
 
 const App = () => {
     return (

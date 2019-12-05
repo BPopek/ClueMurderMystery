@@ -8,8 +8,8 @@ import './fonts/BLOODY.TTF'
 
 ReactDOM.render(
     <ClueProvider>
-    <BrowserRouter>
-        <App />
-    </BrowserRouter>
+        <BrowserRouter>
+            <App />
+        </BrowserRouter>
     </ClueProvider>
     , document.getElementById('root'))

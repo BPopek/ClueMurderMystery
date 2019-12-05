@@ -25,7 +25,7 @@ class Game extends Component {
     }
 
     handleClueToggle = (clueNum) => {
-        const currentArr = this.state.openClues
+        const currentArr = [...this.state.openClues]
         const isOpen = !this.state.openClues[clueNum]
         currentArr.splice(clueNum, 1, isOpen)
         // const themeDing = new Audio(ding)

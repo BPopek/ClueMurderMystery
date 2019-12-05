@@ -1,0 +1,1 @@
+{"options":{},"indexes":[{"v":{"$numberInt":"2"},"key":{"_id":{"$numberInt":"1"}},"name":"_id_","ns":"cluedb.weapons"}],"uuid":"4c33cf64b5bd45aabfa69ebd9e28d238"}

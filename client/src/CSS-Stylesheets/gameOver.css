@@ -12,11 +12,11 @@ html {
 }
 @font-face {
     font-family: 'ExquisiteCorpse';
-    src: url('http://ashandrien.com/fonts/exquisitecorpse.eot');
-    src: url('http://ashandrien.com/fonts/exquisitecorpse.eot?#iefix') format('embedded-opentype'),
-        url('http://ashandrien.com/fonts/exquisitecorpse.woff') format('woff'),
-        url('http://ashandrien.com/fonts/exquisitecorpse.ttf') format('truetype'),
-        url('http://ashandrien.com/fonts/exquisitecorpse.svg#exquisitecorpse') format('svg');
+    src: url('https://ashandrien.com/fonts/exquisitecorpse.eot');
+    src: url('https://ashandrien.com/fonts/exquisitecorpse.eot?#iefix') format('embedded-opentype'),
+        url('https://ashandrien.com/fonts/exquisitecorpse.woff') format('woff'),
+        url('https://ashandrien.com/fonts/exquisitecorpse.ttf') format('truetype'),
+        url('https://ashandrien.com/fonts/exquisitecorpse.svg#exquisitecorpse') format('svg');
     font-weight: normal;
     font-style: normal;
 }

@@ -490,9 +490,6 @@
 }
 
 @media screen and (min-width: 1200px) {
-    .gameTutorialButton {
-        margin-bottom: 40px;
-    }
     .gameTutorialText {
         font-size: 20px;
         line-height: 1.2;

@@ -9,7 +9,7 @@ app.use(express.json())
 app.use(morgan("dev"))
 app.use(express.static(path.join(__dirname, "client", "build")))
 
-mongoose.connect('mongodb://localhost:27017/cluedb',
+mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cluedb',
     {
         useNewUrlParser: true,
         useFindAndModify: false,

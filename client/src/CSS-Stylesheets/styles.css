@@ -33,10 +33,11 @@
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    background-color: grey;
+    background-color: black;
     position: absolute;
     top: 0px;
-    height: 101vh;
+    height: 140vh;
+    min-height: 500px;
     width: 100vw;
     margin: 0px;
 }
@@ -143,11 +144,11 @@
     .landingDivImage {
         position: absolute;
         top: 0px;
-        height: 106%;
+        height: 140vh;
         width: 100%;
     }
     .landingForm {
-        margin: 38vh auto 10px;
+        margin: 36vh auto 10px;
         font-size: 16px;
         padding: 15px;
         top: 0;
@@ -172,10 +173,9 @@
         -moz-background-size: cover;
         -o-background-size: cover;
         background-size: cover;
-        background-color: black;
         position: absolute;
         top: 0px;
-        height: 101vh;
+        height: 140vh;
         width: 100vw;
         margin: 0px;
     }

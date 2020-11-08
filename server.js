@@ -13,7 +13,7 @@ app.use("/clue", require("./routes/ClueRouter"))
 app.use("/character", require("./routes/CharacterRouter"))
 app.use("/weapon", require("./routes/WeaponRouter"))
 
-mongoose.connect(process.env.MONGODB_URI || 'mongodb://localhost:27017/cluedb',
+mongoose.connect(process.env.DB_URI || 'mongodb://localhost:27017/cluedb',
     {
         useNewUrlParser: true,
         useFindAndModify: false,
